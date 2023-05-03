@@ -12,7 +12,7 @@
   top: 0;
   content: " ";
   width: 100vw;
-  height: 800px;
+  height: 650px;
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,10 +22,10 @@
 }
 
 .main::after {
-  top: 25%;
   content: " ";
   width: 100vw;
   height: 600px;
+  margin-top: 13rem;
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;

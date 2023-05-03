@@ -8,17 +8,19 @@ export default function Home() {
   return (
     <>
       <main className={`${styles.main} ${inter.className}`}>
-        <header>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/logo.svg"
-              alt="Logo Pink Codes"
-              className={styles.vercelLogo}
-              width="400"
-              height="50"
-              priority
-            />
-          </a>
+        <header className={styles.header}>
+          <div>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/logo.svg"
+                alt="Logo Pink Codes"
+                className={styles.headerLogo}
+                width="400"
+                height="50"
+                priority
+              />
+            </a>
+          </div>
         </header>
         <div className={styles.description}>
           <p>
