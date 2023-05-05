@@ -1,27 +1,12 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
     <>
-      <main className={`${styles.main} ${inter.className}`}>
-        <header className={styles.header}>
-          <div>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/logo.svg"
-                alt="Logo Pink Codes"
-                className={styles.headerLogo}
-                width="400"
-                height="50"
-                priority
-              />
-            </a>
-          </div>
-        </header>
+      <main className={styles.home}>
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
