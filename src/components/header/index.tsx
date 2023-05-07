@@ -23,7 +23,7 @@ export default function Home() {
         </a>
       </div>
       <div className={styles.headerMenu}>
-        <nav className={styles.navMenu}>
+        <nav className={`flex gap-x-6 ${styles.navMenu}`}>
           <a href="#">Home</a>
           <a href="#">Blog</a>
           <a href="#">Work</a>
