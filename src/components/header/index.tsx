@@ -6,24 +6,24 @@ import { faGear } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   return (
     <header className={styles.header}>
-      <div className="flex gap-6 items-center">
-        <div>
-          <a
-            className={styles.headerLogo}
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/logo.svg"
-              alt="Logo Pink Codes"
-              width="45"
-              height="45"
-              priority
-            />
-          </a>
-        </div>
-        <div className={styles.headerMenu}>
+      <div className="w-full h-full flex items-center justify-between relative">
+        <a
+          className={styles.headerLogo}
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/logo.svg"
+            alt="Logo Pink Codes"
+            width="45"
+            height="45"
+            priority
+          />
+        </a>
+        <div
+          className={`absolute w-full flex items-center justify-center ${styles.headerMenu}`}
+        >
           <nav className={`flex gap-x-6 ${styles.navMenu}`}>
             <a href="#">Inicio</a>
             <a href="#">Lives</a>
@@ -31,9 +31,9 @@ export default function Home() {
             <a href="#">Sobre Mim</a>
           </nav>
         </div>
-      </div>
-      <div className={styles.configBtn}>
-        <FaIcon icon={faGear} />
+        <div className={styles.configBtn}>
+          <FaIcon icon={faGear} />
+        </div>
       </div>
     </header>
   );
