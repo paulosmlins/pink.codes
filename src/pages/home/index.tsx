@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <>
       <main className={styles.home}>
-        <div className={styles.description}></div>
+        <div className={styles.description}>
+          Site em desenvolvimento.
+        </div>
       </main>
     </>
   );
