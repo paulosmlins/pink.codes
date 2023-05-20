@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import type { AppProps } from "next/app";
 
 import MainHeader from "@/components/header";
 
@@ -10,7 +11,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 // since it's already imported above
 config.autoAddCss = false;
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className="main">
       <div className="divcomponent">

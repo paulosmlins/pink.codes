@@ -35,44 +35,43 @@
 }
 
 .navMenu a:hover {
-  text-shadow: 1px 1px 2px black, 0 0 1em var(--primary),
-    0 0 0.2em var(--primary);
+  text-shadow: 2px 3px 2px #000;
 }
 
 .navMenu a::before,
 .navMenu a::after {
-  transition: 0.2s all;
+  transition: 0.3s all;
   content: "";
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 6px;
   height: 6px;
   background: var(--primary);
   border-radius: 100%;
   position: absolute;
+  bottom: -10px;
   z-index: -1;
   opacity: 0;
 }
 
 .navMenu a::after {
-  right: -10px;
+  right: 0;
 }
 
 .navMenu a::before {
-  left: -10px;
+  left: 0;
 }
 
 .navMenu a:hover::after,
 .navMenu a:active::after {
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }
 
 .navMenu a:hover::before,
 .navMenu a:active::before {
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }
 
 .line_menu {
@@ -80,7 +79,7 @@
   height: 100%;
   width: 90%;
   z-index: -1;
-  transition: 0.2s all;
+  transition: 0.3s all;
   opacity: 0;
   border-bottom: 2px dashed var(--primary);
   bottom: -8px;
@@ -89,5 +88,5 @@
 .navMenu a:hover .line_menu,
 .navMenu a:active .line_menu {
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.3s;
 }

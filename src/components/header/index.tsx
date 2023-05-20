@@ -25,10 +25,18 @@ export default function Home() {
           className={`absolute w-full flex items-center justify-center ${styles.headerMenu}`}
         >
           <nav className={`flex gap-x-6 ${styles.navMenu}`}>
-            <a href="#">Inicio</a>
-            <a href="#">Lives</a>
-            <a href="#">Projetos</a>
-            <a href="#">Sobre Mim</a>
+            <a href="#">
+              Inicio <div className={styles.line_menu}></div>
+            </a>
+            <a href="#">
+              Lives <div className={styles.line_menu}></div>
+            </a>
+            <a href="#">
+              Projetos <div className={styles.line_menu}></div>
+            </a>
+            <a href="#">
+              Sobre Mim <div className={styles.line_menu}></div>
+            </a>
           </nav>
         </div>
         <div className={styles.configBtn}>
