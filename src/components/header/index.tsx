@@ -22,9 +22,9 @@ export default function Home() {
         >
           <nav className={`flex gap-x-6 ${styles.navMenu}`}>
             <Link href="/">Inicio</Link>
-            <a href="#">Lives</a>
-            <a href="#">Projetos</a>
-            <a href="#">Sobre Mim</a>
+            <Link href="#">Lives</Link>
+            <Link href="#">Projetos</Link>
+            <Link href="#">Sobre Mim</Link>
           </nav>
         </div>
         <div className={styles.configBtn}>
