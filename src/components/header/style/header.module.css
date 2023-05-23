@@ -16,6 +16,7 @@
   width: max-content;
   height: max-content;
   display: flex;
+  z-index: 999;
 }
 
 .configBtn {
