@@ -12,6 +12,7 @@ export default function Home() {
           <Image
             src="/logo.svg"
             alt="Logo Pink Codes"
+            className="pointer-events-none            "
             width="45"
             height="45"
             priority
