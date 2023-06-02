@@ -1,7 +1,5 @@
 import Image from "next/image";
 import styles from "@/pages/home/style/home.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -35,13 +33,22 @@ export default function Home() {
         <div
           className={`flex items-center justify-end relative ${styles.profilePicture}`}
         >
-          <Image
-            className="pointer-events-none rounded-xl z-10"
-            src="/images/profilePicture.png"
-            alt="Logo Pink Codes"
-            height="400"
-            width="350"
-          />
+          <div className="relative flex items-center justify-end overflow-hidden rounded-2xl">
+            <Image
+              className="pointer-events-none z-10"
+              src="/images/profilePicture.png"
+              alt="Logo Pink Codes"
+              height="400"
+              width="350"
+            />
+            <Image
+              className={`pointer-events-none absolute z-20 ${styles.gray}`}
+              src="/images/profilePicture.png"
+              alt="Logo Pink Codes"
+              height="400"
+              width="350"
+            />
+          </div>
         </div>
       </main>
     </>
