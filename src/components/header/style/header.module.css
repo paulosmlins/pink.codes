@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   max-width: var(--max-width);
@@ -8,7 +7,6 @@
   background-color: rgba(11, 1, 11, 0.3);
   backdrop-filter: blur(2px);
   padding: 15px;
-  border-radius: 20px;
   position: fixed;
 }
 
@@ -17,10 +15,6 @@
   height: max-content;
   display: flex;
   z-index: 999;
-}
-
-.configBtn {
-  font-size: 1.2rem;
 }
 
 .navMenu a {
@@ -42,7 +36,7 @@
 
 .navMenu a::before,
 .navMenu a::after {
-  transition: 0.2s all;
+  transition: 0.15s all;
   content: "";
   display: flex;
   align-items: center;
@@ -67,13 +61,13 @@
 .navMenu a:hover::after,
 .navMenu a:active::after {
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.15s;
 }
 
 .navMenu a:hover::before,
 .navMenu a:active::before {
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.15s;
 }
 
 .line_menu {
@@ -81,7 +75,7 @@
   height: 100%;
   width: 90%;
   z-index: -1;
-  transition: 0.2s all;
+  transition: 0.15s all;
   opacity: 0;
   border-bottom: 2px dashed var(--primary);
   bottom: -8px;
@@ -89,5 +83,5 @@
 .navMenu a:hover .line_menu,
 .navMenu a:active .line_menu {
   opacity: 1;
-  transition-delay: 0.2s;
+  transition-delay: 0.15s;
 }

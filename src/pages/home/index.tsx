@@ -4,8 +4,8 @@ import styles from "@/pages/home/style/home.module.css";
 export default function Home() {
   return (
     <>
-      <main className={styles.home}>
-        <div className={styles.description}>
+      <main className={`flex flex-col pt-5 sm:grid sm:pt-12 ${styles.home}`}>
+        <div className="px-5 mb-8 sm:mb-none sm:px-none">
           <h2 className="font-bold text-xl mb-2">Oiii, meu nome é</h2>
           <h1>
             <picture>
@@ -33,7 +33,7 @@ export default function Home() {
         <div
           className={`flex items-center justify-end relative ${styles.profilePicture}`}
         >
-          <div className="relative flex items-center justify-end overflow-hidden rounded-2xl">
+          <div className="relative flex items-center justify-center overflow-hidden rounded-2xl sm:justify-end">
             <Image
               className="pointer-events-none z-10"
               src="/images/profilePicture.png"

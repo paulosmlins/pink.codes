@@ -3,29 +3,34 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "./style/header.module.css";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
-import { faGear } from "@fortawesome/free-solid-svg-icons";
+import { faGear, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const [navbar, setNavbar] = useState(false);
+  const [settings, setSettings] = useState(false);
   return (
-    <header className={`z-50 ${styles.header}`}>
-      <nav className="w-full bg-gray-800 shadow">
-        <div className="justify-between relative px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+    <header
+      className={`z-50 rounded-none sm:rounded-3xl ${styles.header} ${
+        navbar ? "items-start h-full" : "sm:items-center sm:h-auto"
+      }`}
+    >
+      <nav className="w-full bg-gray-800">
+        <div className="justify-between relative mx-auto md:items-center md:flex ">
           <div className="flex items-center justify-between">
             <Link className={styles.headerLogo} href="/">
               <Image
                 src="/logo.svg"
                 alt="Logo Pink Codes"
-                className="pointer-events-none            "
+                className="pointer-events-none"
                 width="45"
                 height="45"
                 priority
               />
             </Link>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between py-0 sm:py-3 sm:block">
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2 text-gray-700 rounded-md outline-none"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
@@ -69,33 +74,34 @@ export default function Home() {
             <ul
               className={`items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ${styles.navMenu}`}
             >
-              <li className="text-white flex items-center justify-center">
+              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="/">
                   Inicio
                 </Link>
               </li>
-              <li className="text-white flex items-center justify-center">
+              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="#">
                   Lives
                 </Link>
               </li>
-              <li className="text-white flex items-center justify-center">
+              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="#">
                   Projetos
                 </Link>
               </li>
-              <li className="text-white flex items-center justify-center">
+              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="#">
                   Sobre Mim
                 </Link>
               </li>
             </ul>
           </div>
-          <div
-            className={`absolute top-0 bottom-0 right-10 ${styles.configBtn}`}
+          <button
+            className="p-2 text-gray-700 rounded-md outline-none absolute right-12 top-1 sm:relative sm:right-auto sm:top-auto"
+            onClick={() => setSettings(!settings)}
           >
             <FaIcon icon={faGear} />
-          </div>
+          </button>
         </div>
       </nav>
     </header>
