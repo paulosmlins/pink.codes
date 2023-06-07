@@ -8,8 +8,10 @@ export default function Home() {
       <Head>
         <title>✯ PinkCodes</title>
       </Head>
-      <main className={`flex flex-col pt-5 sm:grid sm:pt-12 ${styles.home}`}>
-        <div className="px-5 mb-8 sm:mb-none sm:px-none">
+      <section
+        className={`flex flex-col-reverse py-5 sm:grid sm:py-12 ${styles.home}`}
+      >
+        <div className="px-5 mt-8 sm:mb-none sm:px-none">
           <h2 className="font-bold text-xl mb-2">Oiii, meu nome é</h2>
           <h1>
             <picture>
@@ -54,7 +56,8 @@ export default function Home() {
             />
           </div>
         </div>
-      </main>
+      </section>
+      <hr />
     </>
   );
 }
