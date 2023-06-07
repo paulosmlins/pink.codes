@@ -1,12 +1,12 @@
 import Image from "next/image";
-import styles from "@/pages/home/style/home.module.css";
+import styles from "@/pages/projects/style/projects.module.css";
 import Head from "next/head";
 
-export default function Home() {
+export default function Projects() {
   return (
     <>
       <Head>
-        <title>✯ PinkCodes</title>
+        <title>📚 ✯ Projects ✯ PinkCodes</title>
       </Head>
       <main className={`flex flex-col pt-5 sm:grid sm:pt-12 ${styles.home}`}>
         <div className="px-5 mb-8 sm:mb-none sm:px-none">

@@ -85,7 +85,7 @@ export default function Home() {
                 </Link>
               </li>
               <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
-                <Link className="w-max" href="#">
+                <Link className="w-max" href="/projects">
                   Projetos
                 </Link>
               </li>
