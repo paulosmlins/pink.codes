@@ -74,22 +74,22 @@ export default function Home() {
             <ul
               className={`items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ${styles.navMenu}`}
             >
-              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="/">
                   Inicio
                 </Link>
               </li>
-              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="#">
                   Lives
                 </Link>
               </li>
-              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="/projects">
                   Projetos
                 </Link>
               </li>
-              <li className="text-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
                 <Link className="w-max" href="#">
                   Sobre Mim
                 </Link>
@@ -97,7 +97,7 @@ export default function Home() {
             </ul>
           </div>
           <button
-            className="p-2 text-gray-700 rounded-md outline-none absolute right-12 top-1 sm:relative sm:right-auto sm:top-auto"
+            className="p-2 text-color-white rounded-md outline-none absolute right-12 top-1 sm:relative sm:right-auto sm:top-auto"
             onClick={() => setSettings(!settings)}
           >
             <FaIcon icon={faGear} />

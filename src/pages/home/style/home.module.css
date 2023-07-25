@@ -6,6 +6,10 @@
   justify-content: space-between;
 }
 
+.home h1 {
+  font-size: 3rem;
+}
+
 .profilePicture::before {
   content: "";
   position: absolute;
@@ -264,6 +268,10 @@
 }
 
 @media (max-width: 640px) {
+  .profilePicture {
+    margin-top: 80px;
+  }
+
   .profilePicture::before {
     left: -1rem;
   }
@@ -285,5 +293,22 @@
 
   .profilePicture .gray {
     object-position: center;
+  }
+
+  .home h1 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .home h1 span {
+    font-size: 3rem;
   }
 }

@@ -80,8 +80,15 @@
   border-bottom: 2px dashed var(--primary);
   bottom: -8px;
 }
+
 .navMenu a:hover .line_menu,
 .navMenu a:active .line_menu {
   opacity: 1;
   transition-delay: 0.15s;
+}
+
+@media (max-width: 640px) {
+  .header {
+    margin-top: 0;
+  }
 }
