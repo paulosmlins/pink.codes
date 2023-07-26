@@ -30,7 +30,7 @@ export default function Home() {
             <div className="flex items-center justify-between py-0 sm:py-3 sm:block">
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none"
+                  className="p-2 text-color-white text-gray-700 rounded-md outline-none"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
@@ -100,7 +100,7 @@ export default function Home() {
             className="p-2 text-color-white rounded-md outline-none absolute right-12 top-1 sm:relative sm:right-auto sm:top-auto"
             onClick={() => setSettings(!settings)}
           >
-            <FaIcon icon={faGear} />
+            <FaIcon className="text-color-white" icon={faGear} />
           </button>
         </div>
       </nav>

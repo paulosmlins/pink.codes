@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>✯ PinkCodes</title>
+        <title>✯ PinkCodes ✯</title>
       </Head>
       <section
         className={`flex flex-col-reverse relative py-5 sm:grid sm:py-12 ${styles.home}`}
@@ -36,20 +36,36 @@ export default function Home() {
             </h2>
           </div>
           <div className="pt-12 flex items-center gap-4 justify-center sm:justify-start">
-            <button className="defaultBtn">
+            <a
+              className="defaultBtn"
+              target="_blank"
+              href="https://github.com/PinkC0des"
+            >
               <FaIcon className="text-2xl" icon={faGithub} />
               Github
-            </button>
-            <button className="defaultBtn">
+            </a>
+            <a
+              className="defaultBtn"
+              target="_blank"
+              href="https://www.linkedin.com/in/paulosmlins/"
+            >
               <FaIcon className="text-2xl" icon={faLinkedin} />
-            </button>
-            <button className="defaultBtn">
+            </a>
+            <a
+              className="defaultBtn"
+              target="_blank"
+              href="https://www.instagram.com/pinkc0des/"
+            >
               <FaIcon className="text-2xl" icon={faInstagram} />
-            </button>
-            <button className="defaultBtn">
+            </a>
+            <a
+              className="defaultBtn"
+              target="_blank"
+              href="https://www.twitch.tv/pinkcodes"
+            >
               <FaIcon className="text-2xl" icon={faTwitch} />
               Twitch
-            </button>
+            </a>
           </div>
         </div>
         <div
