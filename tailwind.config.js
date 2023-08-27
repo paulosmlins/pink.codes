@@ -1,3 +1,11 @@
+const colors = require("tailwindcss/colors");
+
+delete colors["lightBlue"];
+delete colors["warmGray"];
+delete colors["trueGray"];
+delete colors["coolGray"];
+delete colors["blueGray"];
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +17,9 @@ module.exports = {
   ],
   theme: {
     colors: {
+      color: colors,
       primary: "#f03880",
+      "primary-hover": "#F5629C",
       blue: "#1fb6ff",
       purple: "#7e5bef",
       pink: "#ff49db",

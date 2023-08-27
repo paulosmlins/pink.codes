@@ -5,7 +5,8 @@
 
 :root {
   --primary: #f03880;
-  --max-width: 1280px;
+  --bg-dark: #0b010b;
+  --max-width: 1200px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -149,11 +150,52 @@ a {
 .divcomponent {
   height: 100vh;
   width: 100%;
-  max-width: 1280px;
+  max-width: var(--max-width);
 }
 
 .component {
   padding-top: 100px;
+}
+
+.defaultBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition-duration: 200ms;
+  transition-delay: 100ms;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: #fff;
+  background-color: var(--primary);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.defaultBtn:hover {
+  transition-delay: 200ms;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 98 156 / var(--tw-bg-opacity));
+}
+
+.defaultBtn svg {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (max-width: 640px) {
+  .component {
+    padding-top: 88px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
