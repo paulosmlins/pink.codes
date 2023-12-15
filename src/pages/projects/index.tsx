@@ -1,13 +1,16 @@
+"use client";
 import Image from "next/image";
 import styles from "@/pages/projects/style/projects.module.css";
 import Head from "next/head";
 
+export const metadata = {
+  title: "📚 ✯ Projects ✯ PinkCodes",
+  description: "Projects page",
+};
+
 export default function Projects() {
   return (
     <>
-      <Head>
-        <title>📚 ✯ Projects ✯ PinkCodes</title>
-      </Head>
       <main className={`flex flex-col pt-5 sm:grid sm:pt-12 ${styles.home}`}>
         <div className="px-5 mb-8 sm:mb-none sm:px-none">
           <h2 className="font-bold text-xl mb-2">Oiii, meu nome é</h2>
@@ -38,14 +41,14 @@ export default function Projects() {
           className={`flex items-center justify-end relative ${styles.profilePicture}`}
         >
           <div className="relative flex items-center justify-center overflow-hidden rounded-2xl sm:justify-end">
-            <Image
+            <img
               className="pointer-events-none z-10"
               src="/images/profilePicture.png"
               alt="Logo Pink Codes"
               height="400"
               width="350"
             />
-            <Image
+            <img
               className={`pointer-events-none absolute z-20 ${styles.gray}`}
               src="/images/profilePicture.png"
               alt="Logo Pink Codes"

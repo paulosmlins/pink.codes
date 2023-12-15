@@ -64,6 +64,14 @@
   transition-delay: 0.2s;
 }
 
+.bottomLine {
+  border-bottom: 1px solid #fff;
+  padding: 0 0 16px 8px;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+}
+
 .glitch {
   position: relative;
   margin: 0 auto;

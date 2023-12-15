@@ -1,5 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
+"use client";
 import styles from "@/pages/home/style/home.module.css";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,12 +8,14 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
+export const metadata = {
+  title: "✯ PinkCodes ✯",
+  description: "Home page",
+};
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>✯ PinkCodes ✯</title>
-      </Head>
       <section
         className={`flex flex-col-reverse relative py-5 sm:grid sm:py-12 ${styles.home}`}
       >
@@ -72,14 +73,14 @@ export default function Home() {
           className={`flex items-center justify-end relative ${styles.profilePicture}`}
         >
           <div className="relative flex items-center justify-center overflow-hidden rounded-2xl sm:justify-end">
-            <Image
+            <img
               className="pointer-events-none z-10"
               src="/images/profilePicture.png"
               alt="Logo Pink Codes"
               height="400"
               width="350"
             />
-            <Image
+            <img
               className={`pointer-events-none absolute z-20 ${styles.gray}`}
               src="/images/profilePicture.png"
               alt="Logo Pink Codes"
@@ -88,6 +89,11 @@ export default function Home() {
             />
           </div>
         </div>
+      </section>
+      <section
+        className={`flex flex-col-reverse relative py-5 sm:grid sm:py-12`}
+      >
+        <div className={styles.bottomLine}>Projetos</div>
       </section>
     </>
   );
