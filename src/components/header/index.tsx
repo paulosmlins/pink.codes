@@ -1,13 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from "./style/header.module.css";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
-import { faGear, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faGear, faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import MenuLine from "@/assets/menuLine";
 
-export default function Home() {
+export default function Header() {
   const [navbar, setNavbar] = useState(false);
   const [settings, setSettings] = useState(false);
+  const pathname = usePathname();
   return (
     <header
       className={`z-50 rounded-none sm:rounded-3xl ${styles.header} ${
@@ -34,62 +37,60 @@ export default function Home() {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-white"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <FaIcon className="text-color-white" icon={faClose} />
                   ) : (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4 6h16M4 12h16M4 18h16"
-                      />
-                    </svg>
+                    <FaIcon className="text-color-white" icon={faBars} />
                   )}
                 </button>
               </div>
             </div>
           </div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            className={`flex-1 justify-self-center pl-6 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
               navbar ? "block" : "hidden"
             }`}
           >
             <ul
-              className={`items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 ${styles.navMenu}`}
+              className={`items-center space-y-8 md:flex md:space-x-6 md:space-y-0 ${styles.navMenu}`}
             >
-              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li
+                className={
+                  pathname === "/" ? styles.linkMenuActive : styles.linkMenu
+                }
+              >
+                <div className={styles.backPartMenu}>
+                  <MenuLine />
+                </div>
                 <Link className="w-max" href="/">
                   Inicio
                 </Link>
               </li>
-              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li className={styles.linkMenu}>
+                <div className={styles.backPartMenu}>
+                  <MenuLine />
+                </div>
                 <Link className="w-max" href="#">
                   Lives
                 </Link>
               </li>
-              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li
+                className={
+                  pathname === "/projects"
+                    ? styles.linkMenuActive
+                    : styles.linkMenu
+                }
+              >
+                <div className={styles.backPartMenu}>
+                  <MenuLine />
+                </div>
                 <Link className="w-max" href="/projects">
                   Projetos
                 </Link>
               </li>
-              <li className="text-color-white flex items-center justify-end relative right-5 sm:right-auto sm:justify-center">
+              <li className={styles.linkMenu}>
+                <div className={styles.backPartMenu}>
+                  <MenuLine />
+                </div>
                 <Link className="w-max" href="#">
                   Sobre Mim
                 </Link>

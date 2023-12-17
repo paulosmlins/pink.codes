@@ -17,16 +17,31 @@ export default function Home() {
   return (
     <>
       <section
-        className={`flex flex-col-reverse relative py-5 sm:grid sm:py-12 ${styles.home}`}
+        className={`flex flex-col-reverse relative py-4 sm:grid sm:py-8 ${styles.home}`}
       >
-        <div className="px-5 mt-6 sm:mt-8 sm:mb-none sm:px-none">
-          <h1 className="font-bold leading-none text-color-white">
-            Oiii, eu sou o <span className="text-primary">Pink 🏳️‍🌈</span>
+        <div className="px-3 sm:mb-none sm:px-none">
+          <h1 className="flex items-center gap-3 font-bold">
+            <div className="leading-none">
+              <span className={styles.nomeHover}>P</span>
+              <span className={styles.nomeHover}>a</span>
+              <span className={styles.nomeHover}>u</span>
+              <span className={styles.nomeHover}>l</span>
+              <span className={styles.nomeHover}>o</span>
+            </div>
+            <div className="leading-none">
+              <span className={styles.nomeHover}>L</span>
+              <span className={styles.nomeHover}>i</span>
+              <span className={styles.nomeHover}>n</span>
+              <span className={styles.nomeHover}>s</span>
+            </div>
           </h1>
-          <div className="sm:pt-4">
-            <h2 className="text-lg text-color-white my-2 text-center sm:text-start">
-              Muito prazer eu sou o Pink, faço lives totalmentes aleatorias, sou
-              Desenvolvedor Front-end web e mobile, inimigo número 1 das{" "}
+          <span className="text-text-grey">
+            Front-end Developer - Web / Mobile
+          </span>
+          <div className="pt-4 sm:pt-4">
+            <h2 className="text-md text-text-grey my-2  sm:text-start">
+              Muito prazer eu sou o Paulo, faço lives totalmentes aleatorias,
+              sou Desenvolvedor Front-end web e mobile, inimigo número 1 das{" "}
               <span className={styles.glitch} data-text="IaS.">
                 IAs
               </span>{" "}
@@ -36,7 +51,7 @@ export default function Home() {
               <span className="top-2.5 relative"> divs.</span>
             </h2>
           </div>
-          <div className="pt-12 flex items-center gap-4 justify-center sm:justify-start">
+          {/* <div className="pt-12 flex items-center gap-4 justify-center sm:justify-start">
             <a
               className="defaultBtn"
               target="_blank"
@@ -87,13 +102,8 @@ export default function Home() {
               height="400"
               width="350"
             />
-          </div>
+          </div> */}
         </div>
-      </section>
-      <section
-        className={`flex flex-col-reverse relative py-5 sm:grid sm:py-12`}
-      >
-        <div className={styles.bottomLine}>Projetos</div>
       </section>
     </>
   );

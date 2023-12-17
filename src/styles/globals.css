@@ -6,7 +6,8 @@
 :root {
   --primary: #f03880;
   --bg-dark: #0b010b;
-  --max-width: 1200px;
+  --text-grey: #939393;
+  --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -93,6 +94,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: #0b010b;
+  /* background: #fff; */
 }
 
 a {
@@ -108,33 +110,6 @@ a {
   position: relative;
   width: 100vw;
   height: 100vh;
-}
-
-#__next::before {
-  top: 0;
-  content: " ";
-  width: 100vw;
-  height: 650px;
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(/images/logofundo.png);
-  z-index: 2;
-}
-
-#__next::after {
-  content: " ";
-  width: 100vw;
-  height: 600px;
-  margin-top: 13rem;
-  position: absolute;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(/images/smokes.png);
-  z-index: 1;
-  opacity: 0.5;
 }
 
 .main {
@@ -190,6 +165,50 @@ a {
 .defaultBtn svg {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.nnnoise {
+  background-image: url(../../public/nnnoise-bg.svg);
+}
+
+.ooorganize {
+  background-image: url(../../public/ooorganize-bg.svg);
+}
+
+.mix-blend-color-dodge {
+  mix-blend-mode: color-dodge;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bg-center {
+  background-position: 50%;
+}
+
+.opacity-30 {
+  opacity: 0.2;
+}
+
+.-z-1 {
+  z-index: -1;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.relative {
+  position: relative;
+}
+
+.pointer-events-none {
+  pointer-events: none;
 }
 
 @media (max-width: 640px) {
