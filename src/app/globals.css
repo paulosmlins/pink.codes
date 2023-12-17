@@ -102,16 +102,6 @@ a {
   text-decoration: none;
 }
 
-#__next {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
 .main {
   z-index: 9;
   height: 100vh;
@@ -120,6 +110,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.mainPage {
+  height: 100vh;
+  width: 100%;
+  max-width: var(--max-width);
 }
 
 .divcomponent {

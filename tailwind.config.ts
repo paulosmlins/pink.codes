@@ -1,3 +1,4 @@
+import type { Config } from "tailwindcss";
 const colors = require("tailwindcss/colors");
 
 delete colors["lightBlue"];
@@ -6,11 +7,11 @@ delete colors["trueGray"];
 delete colors["coolGray"];
 delete colors["blueGray"];
 
-module.exports = {
+const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
@@ -34,3 +35,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+export default config;

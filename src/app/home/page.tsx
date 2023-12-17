@@ -1,5 +1,6 @@
 "use client";
-import styles from "@/pages/home/style/home.module.css";
+import styles from "./page.module.css";
+import type { Metadata } from "next";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -7,11 +8,6 @@ import {
   faTwitch,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-
-export const metadata = {
-  title: "✯ PinkCodes ✯",
-  description: "Home page",
-};
 
 export default function Home() {
   return (

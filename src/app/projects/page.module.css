@@ -2,8 +2,28 @@
   height: 100%;
   flex-grow: 1;
   align-items: center;
-  grid-template-columns: 50% auto;
+  grid-template-columns: 47% auto;
   justify-content: space-between;
+}
+
+.home h1 {
+  font-size: 3rem;
+}
+
+.nomeHover {
+  color: #fff;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  display: inline-block;
+  line-height: 1;
+}
+
+.nomeHover:hover {
+  color: var(--primary);
+  -webkit-transition: color 0s;
+  transition: color 0s;
 }
 
 .profilePicture::before {
@@ -58,6 +78,14 @@
   transition: all 0.4s ease;
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+}
+
+.bottomLine {
+  border-bottom: 1px solid #fff;
+  padding: 0 0 16px 8px;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
 }
 
 .glitch {
@@ -264,6 +292,10 @@
 }
 
 @media (max-width: 640px) {
+  .profilePicture {
+    margin-top: 80px;
+  }
+
   .profilePicture::before {
     left: -1rem;
   }
@@ -285,5 +317,13 @@
 
   .profilePicture .gray {
     object-position: center;
+  }
+
+  .home h1 {
+    font-size: 1.8rem;
+  }
+
+  .home h1 span {
+    font-size: 3rem;
   }
 }
