@@ -168,11 +168,11 @@ a {
 }
 
 .nnnoise {
-  background-image: url(../../public/nnnoise-bg.svg);
+  background-image: url(/images/nnnoise-bg.svg);
 }
 
 .ooorganize {
-  background-image: url(../../public/ooorganize-bg.svg);
+  background-image: url(/images/ooorganize-bg.svg);
 }
 
 .mix-blend-color-dodge {
