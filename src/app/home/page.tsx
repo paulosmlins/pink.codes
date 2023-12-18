@@ -61,7 +61,7 @@ export default function Home() {
             />
           </div>
           <div className={styles.divBallon}>
-            <div className={styles.ballon}>Don't click</div>
+            <div className={styles.ballon}>Don&apos;t click</div>
           </div>
         </div>
         {/* <div className="pt-12 flex items-center gap-4 justify-center sm:justify-start">
