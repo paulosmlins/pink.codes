@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -15,7 +15,7 @@ export default function Home() {
       <section
         className={`flex flex-col-reverse relative py-4 sm:grid sm:py-8 ${styles.home}`}
       >
-        <div className="px-3 sm:mb-none sm:px-none">
+        <div className="pl-3 sm:mb-none sm:px-none">
           <h1 className="flex items-center gap-3 font-bold">
             <div className="leading-none">
               <span className={styles.nomeHover}>P</span>
@@ -47,7 +47,24 @@ export default function Home() {
               <span className="top-2.5 relative"> divs.</span>
             </h2>
           </div>
-          {/* <div className="pt-12 flex items-center gap-4 justify-center sm:justify-start">
+        </div>
+        <div
+          className={`flex items-center justify-center relative ${styles.profilePicture}`}
+        >
+          <div className="relative flex items-center justify-center overflow-hidden rounded-2xl sm:justify-end">
+            <img
+              className="pointer-events-none z-10"
+              src="/images/profile.png"
+              alt="Logo Pink Codes"
+              height="200"
+              width="200"
+            />
+          </div>
+          <div className={styles.divBallon}>
+            <div className={styles.ballon}>Don't click</div>
+          </div>
+        </div>
+        {/* <div className="pt-12 flex items-center gap-4 justify-center sm:justify-start">
             <a
               className="defaultBtn"
               target="_blank"
@@ -80,26 +97,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div
-          className={`flex items-center justify-end relative ${styles.profilePicture}`}
-        >
-          <div className="relative flex items-center justify-center overflow-hidden rounded-2xl sm:justify-end">
-            <img
-              className="pointer-events-none z-10"
-              src="/images/profilePicture.png"
-              alt="Logo Pink Codes"
-              height="400"
-              width="350"
-            />
-            <img
-              className={`pointer-events-none absolute z-20 ${styles.gray}`}
-              src="/images/profilePicture.png"
-              alt="Logo Pink Codes"
-              height="400"
-              width="350"
-            />
-          </div> */}
-        </div>
+         */}
       </section>
     </>
   );

@@ -3,9 +3,19 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/header";
+import { Metadata } from "next";
 
 config.autoAddCss = false;
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "",
+    default: "✯ PinkCodes ✯",
+    template: "%s ✯ PinkCodes",
+  },
+  description: "My personal website",
+};
 
 export default function RootLayout({
   children,

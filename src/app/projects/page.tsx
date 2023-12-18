@@ -1,6 +1,5 @@
-"use client";
 import styles from "./page.module.css";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { FontAwesomeIcon as FaIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -8,6 +7,10 @@ import {
   faTwitch,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+
+export const metadata: Metadata = {
+  title: "📚 ✯ Projects",
+};
 
 export default function Home() {
   return (
@@ -17,18 +20,27 @@ export default function Home() {
       >
         <div className="px-3 sm:mb-none sm:px-none">
           <h1 className="flex items-center gap-3 font-bold">
-            <div className="leading-none">
-              <span className={styles.nomeHover}>P</span>
-              <span className={styles.nomeHover}>a</span>
-              <span className={styles.nomeHover}>u</span>
-              <span className={styles.nomeHover}>l</span>
-              <span className={styles.nomeHover}>o</span>
-            </div>
-            <div className="leading-none">
-              <span className={styles.nomeHover}>L</span>
-              <span className={styles.nomeHover}>i</span>
-              <span className={styles.nomeHover}>n</span>
-              <span className={styles.nomeHover}>s</span>
+            <img
+              className="pointer-events-none"
+              src="/images/profile.png"
+              alt="Profile Picture"
+              height="200"
+              width="200"
+            />
+            <div>
+              <div className="leading-none">
+                <span className={styles.nomeHover}>P</span>
+                <span className={styles.nomeHover}>a</span>
+                <span className={styles.nomeHover}>u</span>
+                <span className={styles.nomeHover}>l</span>
+                <span className={styles.nomeHover}>o</span>
+              </div>
+              <div className="leading-none">
+                <span className={styles.nomeHover}>L</span>
+                <span className={styles.nomeHover}>i</span>
+                <span className={styles.nomeHover}>n</span>
+                <span className={styles.nomeHover}>s</span>
+              </div>
             </div>
           </h1>
           <span className="text-text-grey">
