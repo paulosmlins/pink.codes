@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/header";
@@ -28,7 +29,10 @@ export default function RootLayout({
         <div className="main">
           <section className="mainPage">
             <Header />
-            <div className="pt-24">{children}</div>
+            <div className="pt-24">
+              {children}
+              <SpeedInsights />
+            </div>
           </section>
         </div>
         <div className="pointer-events-none relative isolate -z-1 opacity-30">
