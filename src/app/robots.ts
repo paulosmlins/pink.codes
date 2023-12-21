@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/'
     },
-    sitemap: 'https://kelvinamp.me/sitemap.xml',
-    host: 'https://kelvinamp.me'
+    sitemap: 'https://pink.codes/sitemap.xml',
+    host: 'https://pink.codes'
   };
 }

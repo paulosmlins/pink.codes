@@ -19,7 +19,7 @@ export default function Home() {
         <header>
           <Heading>Paulo Lins</Heading>
           <Text as="span" colour="secondary">
-            Software Engineer
+            Front-end Developer
           </Text>
         </header>
       </AnimateEnter>
