@@ -9,11 +9,11 @@ import Header from './components/ui/header';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Kelvin Ampofo',
+    default: 'Paulo Lins',
     template: '%s'
   },
-  metadataBase: new URL('https://kelvinamp.me'),
-  creator: 'Kelvin Ampofo',
+  metadataBase: new URL('https://pink.codes'),
+  creator: 'Paulo Lins',
   description:
     'Crafting interfaces with a focus on design, human-computer interaction and architecture.',
   icons: {
@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png'
   },
   openGraph: {
-    title: 'Kelvin Ampofo',
+    title: 'Paulo Lins',
     description:
       'Crafting interfaces with a focus on design, human-computer interaction and architecture.',
-    url: 'https://kelvinamp.me',
-    siteName: 'Kelvin Ampofo',
-    locale: 'en-US',
+    url: 'https://pink.codes',
+    siteName: 'Paulo Lins',
+    locale: 'pt-BR',
     type: 'website',
     images: [
       {
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     }
   },
   twitter: {
-    title: 'Kelvin Ampofo',
-    site: '@kelvinamp_',
-    creator: '@kelvinamp',
+    title: 'Paulo Lins',
+    site: '@pinkc0des',
+    creator: '@pinkc0des',
     card: 'summary_large_image',
     description:
       'Crafting interfaces with a focus on design, human-computer interaction and architecture.'
