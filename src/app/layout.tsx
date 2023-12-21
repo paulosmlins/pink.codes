@@ -1,44 +1,78 @@
-import "@/app/globals.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { Inter } from "next/font/google";
-import Header from "@/components/header";
-import { Metadata } from "next";
-
-config.autoAddCss = false;
-const inter = Inter({ subsets: ["latin"] });
+import '@/app/styles/globals.css';
+import c from 'clsx';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+import Providers from './providers';
+import Header from './components/ui/header';
 
 export const metadata: Metadata = {
   title: {
-    absolute: "",
-    default: "✯ PinkCodes ✯",
-    template: "%s ✯ PinkCodes",
+    default: 'Kelvin Ampofo',
+    template: '%s'
   },
-  description: "My personal website",
+  metadataBase: new URL('https://kelvinamp.me'),
+  creator: 'Kelvin Ampofo',
+  description:
+    'Crafting interfaces with a focus on design, human-computer interaction and architecture.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png'
+  },
+  openGraph: {
+    title: 'Kelvin Ampofo',
+    description:
+      'Crafting interfaces with a focus on design, human-computer interaction and architecture.',
+    url: 'https://kelvinamp.me',
+    siteName: 'Kelvin Ampofo',
+    locale: 'en-US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://kelvinamp.me/og.jpeg',
+        height: 1200,
+        width: 1200,
+        alt: 'Black background image'
+      }
+    ]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  twitter: {
+    title: 'Kelvin Ampofo',
+    site: '@kelvinamp_',
+    creator: '@kelvinamp',
+    card: 'summary_large_image',
+    description:
+      'Crafting interfaces with a focus on design, human-computer interaction and architecture.'
+  }
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="pt">
-      <body className={inter.className}>
-        <div className="main">
-          <section className="mainPage">
+    <html lang="en" className={c('scroll-smooth', GeistMono.variable, GeistSans.variable)}>
+      <body className="text-sm text-white md:text-base lg:text-base">
+        <Providers>
+          <main className="container mx-auto min-h-full max-w-3xl">
             <Header />
-            <div className="pt-24">
-              {children}
-              <SpeedInsights />
-            </div>
-          </section>
-        </div>
-        <div className="pointer-events-none relative isolate -z-1 opacity-30">
-          <div className="fixed inset-0 mix-blend-color-dodge nnnoise"></div>
-          <div className="fixed inset-0 bg-center mix-blend-color-dodge ooorganize"></div>
-        </div>
+            <div className="pt-36">{children}</div>
+          </main>
+        </Providers>
       </body>
     </html>
   );

@@ -1,0 +1,83 @@
+.prose {
+  @apply max-w-3xl text-black antialiased marker:text-[#6F6F6F] dark:text-[#EDEDED] marker:dark:text-neutral-400;
+}
+
+.prose > blockquote {
+  @apply border-l-4 text-[#6F6F6F] dark:border-[#6F6F6F] dark:text-neutral-400;
+}
+
+.prose a {
+  @apply font-normal text-black underline decoration-neutral-300 decoration-1 underline-offset-[2.5px] dark:text-[#EDEDED] dark:decoration-[#505050];
+}
+
+.prose strong {
+  @apply font-medium text-black dark:text-[#EDEDED];
+}
+
+.prose code {
+  @apply rounded-md border border-neutral-100 bg-neutral-100 px-1 py-0.5 font-medium text-neutral-800 dark:border-neutral-800 dark:bg-neutral-900 dark:text-[#EDEDED];
+}
+
+.prose > :first-child {
+  /* override removing top margin, which causes layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+pre > code {
+  display: grid;
+}
+
+.prose pre code {
+  @apply p-0 text-neutral-800 dark:text-neutral-200;
+  border: initial;
+}
+
+.prose pre {
+  @apply border border-neutral-800 bg-neutral-900 !important;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-neutral-50;
+}
+
+[data-rehype-pretty-code-fragment] code {
+  @apply grid min-w-full break-words rounded-none border-0  p-0 text-xs text-black md:text-sm lg:text-sm;
+  counter-reset: line;
+  box-decoration-break: clone;
+}
+
+[data-rehype-pretty-code-fragment] [data-line] {
+  @apply py-1;
+}
+
+[data-rehype-pretty-code-fragment] [data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 1rem;
+  text-align: right;
+  color: gray;
+}
+
+[data-rehype-pretty-code-fragment] [data-highlighted-line] {
+  @apply bg-slate-500 bg-opacity-10;
+}
+
+[data-rehype-pretty-code-fragment] [data-highlighted-line] span {
+  @apply relative;
+}
+
+[data-rehype-pretty-code-fragment] .word--highlighted {
+  @apply rounded-md bg-slate-500 bg-opacity-10 p-1;
+}
+
+[data-rehype-pretty-code-title] {
+  @apply rounded-t-lg border border-[#333333] bg-[#1c1c1c] px-4 py-3 font-mono text-xs font-medium text-neutral-200;
+}
+
+[data-rehype-pretty-code-title] + pre {
+  @apply mt-0 rounded-t-none border-t-0;
+}

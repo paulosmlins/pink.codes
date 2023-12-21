@@ -1,39 +1,44 @@
-import type { Config } from "tailwindcss";
-const colors = require("tailwindcss/colors");
+import type { Config } from 'tailwindcss';
 
-delete colors["lightBlue"];
-delete colors["warmGray"];
-delete colors["trueGray"];
-delete colors["coolGray"];
-delete colors["blueGray"];
-
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+export default {
+  content: ['./src/**/*.{ts,tsx}', './content/**/*.{md,mdx}'],
   theme: {
-    colors: {
-      color: colors,
-      primary: "#f03880",
-      "text-grey": "#939393",
-      "primary-hover": "#F5629C",
-      blue: "#1fb6ff",
-      purple: "#7e5bef",
-      pink: "#ff49db",
-      orange: "#ff7849",
-      green: "#13ce66",
-      yellow: "#ffc82c",
-      "gray-dark": "#273444",
-      gray: "#8492a6",
-      "gray-light": "#d3dce6",
-    },
+    extend: {
+      colors: {
+        primary: '#f03880',
+        'text-grey': '#939393',
+        'primary-hover': '#F5629C',
+        secondary: '#6F6F6F',
+        'primary-dark': '#EDEDED',
+        'secondary-dark': '#A0A0A0'
+      },
+      spacing: {
+        'page-top': 'var(--page-top)',
+        'page-top-mobile': 'var(--page-top-mobile)',
+        'page-bottom': 'var(--page-bottom)',
+        'page-bottom-mobile': 'var(--page-bottom-mobile)'
+      },
+      fontFamily: {
+        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-geist-mono)']
+      },
+      animation: {
+        shine: 'shineAnimation 2.5s linear 0s infinite normal forwards'
+      },
+      keyframes: {
+        shineAnimation: {
+          '0%': { 'background-position': 'left' },
+          '50%': { 'background-position': 'right' }
+        }
+      },
+      backgroundSize: {
+        '200': '200%'
+      }
+    }
   },
-  plugins: [],
-};
-
-export default config;
+  darkMode: 'class',
+  future: {
+    hoverOnlyWhenSupported: true
+  },
+  plugins: [require('@tailwindcss/typography')]
+} satisfies Config;
