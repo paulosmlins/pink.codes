@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: 'Now',
-    site: '@kelvinamp_',
+    site: '@pinkc0des',
     card: 'summary',
     description: 'Personal and professional updates.',
     images: [
       {
-        url: 'https://kelvinamp.me/og.jpeg',
+        url: 'https://pink.codes/og.jpeg',
         height: 1200,
         width: 1200
       }

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://kelvinamp.me/og.jpeg',
+        url: 'https://pink.codes/og.jpeg',
         height: 1200,
         width: 1200,
         alt: 'Black background image'

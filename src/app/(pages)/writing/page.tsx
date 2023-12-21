@@ -8,8 +8,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Writing',
-  publisher: 'Kelvin Ampofo',
-  authors: [{ name: 'Kelvin Ampofo' }],
+  publisher: 'Paulo Lins',
+  authors: [{ name: 'Paulo Lins' }],
   description: 'Infrequent thoughts.',
   openGraph: {
     title: 'Writing',
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: 'Writing',
-    site: '@kelvinamp_',
-    creator: '@kelvinamp',
+    site: '@pinkc0des',
+    creator: '@pinkc0des',
     card: 'summary',
     description: 'Infrequent thoughts.',
     images: [
       {
-        url: 'https://kelvinamp.me/og.jpeg',
+        url: 'https://pink.codes/og.jpeg',
         height: 1200,
         width: 1200
       }

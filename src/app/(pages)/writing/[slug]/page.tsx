@@ -31,19 +31,19 @@ export async function generateMetadata({ params }: Params): Promise<Metadata | u
 
   const { title, publishedAt, summary, slug, image } = post;
 
-  const ogImage = image ? `https://kelvinamp.me${image}` : 'https://kelvinamp.me/og.jpeg';
+  const ogImage = image ? `https://pink.codes${image}` : 'https://pink.codes/og.jpeg';
 
   return {
     title,
-    publisher: 'Kelvin Ampofo',
-    authors: [{ name: 'Kelvin Ampofo' }],
+    publisher: 'Paulo Lins',
+    authors: [{ name: 'Paulo Lins' }],
     description: summary,
     openGraph: {
       title,
       description: summary,
       type: 'article',
       publishedTime: publishedAt,
-      url: `https://kelvinamp.me/writing/${slug}`,
+      url: `https://pink.codes/writing/${slug}`,
       images: [
         {
           url: ogImage,
@@ -52,9 +52,9 @@ export async function generateMetadata({ params }: Params): Promise<Metadata | u
       ]
     },
     twitter: {
-      site: '@kelvinamp_',
+      site: '@pinkc0des',
       card: 'summary_large_image',
-      creator: '@kelvinamp',
+      creator: '@pinkc0des',
       title,
       description: summary,
       images: [

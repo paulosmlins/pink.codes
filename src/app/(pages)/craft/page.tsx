@@ -10,19 +10,19 @@ import React from 'react';
 export const metadata: Metadata = {
   title: 'Craft',
   description: 'Crafting web interfaces.',
-  authors: [{ name: 'Kelvin Ampofo' }],
+  authors: [{ name: 'Pink Codes' }],
   openGraph: {
     title: 'Craft',
     description: 'Crafting web interfaces.'
   },
   twitter: {
     title: 'Craft',
-    site: '@kelvinamp_',
+    site: '@pinkc0des',
     card: 'summary_large_image',
     description: 'Crafting web interfaces.',
     images: [
       {
-        url: 'https://kelvinamp.me/og.jpeg',
+        url: 'https://pink.codes/og.jpeg',
         height: 1200,
         width: 1200
       }

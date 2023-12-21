@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Simple loading state indicators.',
     images: [
       {
-        url: 'https://kelvinamp.me/assets/images/og-images/og-loading-states.png',
+        url: 'https://pink.codes/assets/images/og-images/og-loading-states.png',
         height: 1200,
         width: 1200,
         alt: 'Simple loading state indicators.'
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: 'Simple loading state indicators.',
     images: [
       {
-        url: 'https://kelvinamp.me/assets/images/og-images/og-loading-states.png',
+        url: 'https://pink.codes/assets/images/og-images/og-loading-states.png',
         height: 1200,
         width: 1200,
         alt: 'Simple loading state indicators.'

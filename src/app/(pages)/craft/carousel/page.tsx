@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'A minimal CSS based carousel.',
     images: [
       {
-        url: 'https://kelvinamp.me/assets/images/carousel/og-carousel.png',
+        url: 'https://pink.codes/assets/images/carousel/og-carousel.png',
         height: 1200,
         width: 1200,
         alt: 'A minimal CSS based carousel.'
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: 'A minimal CSS based carousel.',
     images: [
       {
-        url: 'https://kelvinamp.me/assets/images/carousel/og-carousel.png',
+        url: 'https://pink.codes/assets/images/carousel/og-carousel.png',
         height: 1200,
         width: 1200,
         alt: 'A minimal CSS based carousel.'
