@@ -5,18 +5,18 @@ import c from 'clsx';
 export default function Contact() {
   const contactLinks = [
     {
-      label: '@kelvinamp_',
-      href: 'https://x.com/kelvinamp_',
+      label: '@pinkc0des',
+      href: 'https://x.com/pinkc0des',
       ariaLabel: 'Twitter profile'
     },
     {
       label: 'GitHub',
-      href: 'https://github.com/kelvinampofo',
+      href: 'https://github.com/pinkc0des',
       ariaLabel: 'GitHub profile'
     },
     {
       label: 'Email',
-      href: 'mailto:k@kelvinamp.me',
+      href: 'contato@pink.codes',
       ariaLabel: 'Email address'
     }
   ];

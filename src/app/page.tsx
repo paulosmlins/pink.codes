@@ -17,7 +17,7 @@ export default function Home() {
     <Container>
       <AnimateEnter delay={0.4}>
         <header>
-          <Heading>Kelvin Ampofo</Heading>
+          <Heading>Paulo Lins</Heading>
           <Text as="span" colour="secondary">
             Software Engineer
           </Text>
