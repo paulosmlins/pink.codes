@@ -4,29 +4,26 @@ import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import Providers from './providers';
-import Header from './components/ui/header';
+import Providers from '@/app/providers';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Paulo Lins',
+    default: '🎈 Bio - Paulo Lins',
     template: '%s'
   },
-  metadataBase: new URL('https://pink.codes'),
-  creator: 'Paulo Lins',
-  description:
-    'Crafting interfaces with a focus on design, human-computer interaction and architecture.',
+  metadataBase: new URL('https://pink.codes/bio'),
+  creator: 'Paulo Lins Bio',
+  description: 'Bio com rede sociais e links uteis',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png'
   },
   openGraph: {
-    title: 'Paulo Lins',
-    description:
-      'Crafting interfaces with a focus on design, human-computer interaction and architecture.',
+    title: 'Paulo Lins Bio',
+    description: 'Bio com rede sociais e links uteis',
     url: 'https://pink.codes',
-    siteName: 'Paulo Lins',
+    siteName: 'Paulo Lins Bio',
     locale: 'pt-BR',
     type: 'website',
     images: [
@@ -50,12 +47,11 @@ export const metadata: Metadata = {
     }
   },
   twitter: {
-    title: 'Paulo Lins',
+    title: 'Paulo Lins Bio',
     site: '@pinkc0des',
     creator: '@pinkc0des',
     card: 'summary_large_image',
-    description:
-      'Crafting interfaces with a focus on design, human-computer interaction and architecture.'
+    description: 'Bio com rede sociais e links uteis'
   }
 };
 
@@ -68,9 +64,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" className={c('scroll-smooth', GeistMono.variable, GeistSans.variable)}>
       <body className="text-sm text-white md:text-base lg:text-base">
         <Providers>
-          <main className="container mx-auto min-h-full max-w-3xl">
-            <Header />
-            <div className="pt-36">{children}</div>
+          <main className="containerBio relative mx-auto min-h-full max-w-3xl">
+            <div className="">{children}</div>
           </main>
         </Providers>
       </body>
