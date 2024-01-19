@@ -7,5 +7,5 @@ interface ContainerProps {
 }
 
 export default function Container({ children, className }: ContainerProps) {
-  return <div className={c('flex flex-col justify-center px-3', className)}>{children}</div>;
+  return <div className={c('flex flex-col px-3', className)}>{children}</div>;
 }

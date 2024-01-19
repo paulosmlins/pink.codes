@@ -6,6 +6,8 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Providers from '@/app/providers';
 import Header from '@/app/components/ui/header';
+import Footer from '@/app/components/ui/footer';
+import Separator from '@/app/components/generic/Separator';
 
 export const metadata: Metadata = {
   title: {
@@ -68,9 +70,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" className={c('scroll-smooth', GeistMono.variable, GeistSans.variable)}>
       <body className="text-sm text-white md:text-base lg:text-base">
         <Providers>
-          <main className="container relative mx-auto min-h-full max-w-3xl">
+          <main className="relative mx-auto flex min-h-screen flex-col items-center">
             <Header />
-            <div className="pt-24">{children}</div>
+            <div className="container grow pt-20">{children}</div>
+            <Separator className="w-full" />
+            <Footer />
           </main>
         </Providers>
       </body>

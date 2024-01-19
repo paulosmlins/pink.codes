@@ -5,22 +5,23 @@ import AnimateEnter from '@/app/components/generic/AnimateEnter';
 import Container from '@/app/components/generic/Container';
 // import Heading from '@/app/components/generic/Heading';
 // import Separator from '@/app/components/generic/Separator';
-// import Text from '@/app/components/generic/Text';
+// import Text from '@/app/components/generic/Text'; 
 import styles from './page.module.css';
 import Tooltip from '@/app/components/ui/Tooltip';
 import useTime from '@/app/hooks/useTime';
 import { Icon } from '@/app/components/ui/Icon';
+import Link from 'next/link';
 
 export default function Bio() {
   const { currentTime, timezoneOffset } = useTime();
 
   return (
     <Container className="flex min-h-screen flex-col justify-between pt-16">
-      <div className="pt-4">
+      <div className={`pt-4 ${styles.bio}`}>
         <AnimateEnter delay={0.4}>
-          <section className={`relative flex items-center ${styles.bio}`}>
+          <section className="relative flex items-center">
             <div className="flex w-full flex-col items-center justify-center gap-10">
-              <AnimateEnter delay={1}>
+              <AnimateEnter delay={0.4}>
                 <div
                   className={`relative flex items-center justify-center ${styles.profilePicture}`}
                 >
@@ -29,8 +30,8 @@ export default function Bio() {
                       className="pointer-events-none z-10"
                       src="/assets/images/profile.png"
                       alt="Logo Pink Codes"
-                      height="200"
-                      width="200"
+                      height="180"
+                      width="180"
                     />
                   </div>
                   <div className={styles.divBallon}>
@@ -38,7 +39,7 @@ export default function Bio() {
                   </div>
                 </div>
               </AnimateEnter>
-              <AnimateEnter delay={0.4}>
+              <AnimateEnter delay={0.6}>
                 <h1 className="flex items-center gap-3 font-bold">
                   <div className="leading-none">
                     <span className={styles.nomeHover}>P</span>
@@ -58,46 +59,101 @@ export default function Bio() {
             </div>
           </section>
         </AnimateEnter>
-        <AnimateEnter delay={0.4}>
-          <div className="mt-4 flex items-center justify-center gap-4">
-            <Icon
-              name="instagram"
-              height={32}
-              width={32}
-              className=" inline-flex items-center text-white"
-            />
-            <Icon
-              name="tiktok"
-              height={24}
-              width={24}
-              className=" inline-flex items-center text-white"
-            />
-            <Icon
-              name="youtube"
-              height={24}
-              width={24}
-              className=" inline-flex items-center text-white"
-            />
-            <Icon
-              name="mail"
-              height={24}
-              width={24}
-              className=" inline-flex items-center text-white"
-            />
-          </div>
-        </AnimateEnter>
-        <div className="px-6 pt-10">
-          <AnimateEnter delay={0.6}>
-            <div className="flex items-center rounded-full border border-white p-2">
+        <AnimateEnter delay={0.8}>
+          <div className="mt-4 flex items-center justify-center gap-5">
+            <Link
+              className={`${styles.linkIcon}`}
+              href="https://www.twitch.tv/pinkcodes"
+              target="_blank"
+            >
               <Icon
-                name="spotify"
-                height={60}
-                width={60}
+                name="twitch"
+                height={28}
+                width={28}
                 className=" inline-flex items-center text-white"
               />
-              <div className="grow text-center text-base">Playlist para trabalhar</div>
-            </div>
+            </Link>
+            <Link
+              className={`${styles.linkIcon}`}
+              href="https://www.twitch.tv/pinkcodes"
+              target="_blank"
+            >
+              <Icon
+                name="instagram"
+                height={32}
+                width={32}
+                className=" inline-flex items-center text-white"
+              />
+            </Link>
+            <Link
+              className={`${styles.linkIcon}`}
+              href="https://www.twitch.tv/pinkcodes"
+              target="_blank"
+            >
+              <Icon
+                name="tiktok"
+                height={24}
+                width={24}
+                className=" inline-flex items-center text-white"
+              />
+            </Link>
+            <Link
+              className={`${styles.linkIcon}`}
+              href="https://www.twitch.tv/pinkcodes"
+              target="_blank"
+            >
+              <Icon
+                name="youtube"
+                height={24}
+                width={24}
+                className=" inline-flex items-center text-white"
+              />
+            </Link>
+            <Link
+              className={`${styles.linkIcon}`}
+              href="https://www.twitch.tv/pinkcodes"
+              target="_blank"
+            >
+              <Icon
+                name="mail"
+                height={24}
+                width={24}
+                className=" inline-flex items-center text-white"
+              />
+            </Link>
+          </div>
+        </AnimateEnter>
+        <div className="flex flex-col gap-5 px-6 pt-10">
+          <AnimateEnter delay={1}>
+            <Link
+              target="_blank"
+              href="https://open.spotify.com/playlist/1hcF0Rbvrfhq9xdVpjgMBS?si=b809ff24898d4d09"
+              className={`flex items-center rounded-md bg-white px-3 py-2 ${styles.linkBox}`}
+            >
+              <Icon
+                name="spotify"
+                height={50}
+                width={50}
+                className=" inline-flex items-center text-black"
+              />
+              <div className="grow text-center text-base text-black">Playlist para trabalhar</div>
+            </Link>
           </AnimateEnter>
+          {/* <AnimateEnter delay={1}>
+            <Link
+              target="_blank"
+              href="https://open.spotify.com/playlist/1hcF0Rbvrfhq9xdVpjgMBS?si=b809ff24898d4d09"
+              className={`flex items-center rounded-md bg-white px-3 py-2 ${styles.linkBox}`}
+            >
+              <Icon
+                name="products"
+                height={50}
+                width={50}
+                className=" inline-flex items-center text-black"
+              />
+              <div className="grow text-center text-base text-black">Link de produtos</div>
+            </Link>
+          </AnimateEnter> */}
         </div>
       </div>
 

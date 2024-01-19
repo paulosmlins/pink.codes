@@ -13,7 +13,7 @@ export default function Header() {
   const [settings, setSettings] = useState(false);
   return (
     <header className="header z-50 rounded-none sm:rounded-3xl ">
-      <nav className="w-full">
+      <nav className="container px-3">
         <div className="relative mx-auto justify-between md:flex md:items-center ">
           <AnimateEnter delay={0.2}>
             <Link className="headerLogo" href="/">
@@ -65,14 +65,24 @@ export default function Header() {
             </ul>
           </div>
           <AnimateEnter delay={0.7}>
-            <button onClick={() => setSettings(!settings)}>
-              <Icon
-                name="gear"
-                height={20}
-                width={20}
-                className="mx-1 inline-flex items-center text-white"
-              />
-            </button>
+            <div className="flex items-center gap-2">
+              <button onClick={() => setSettings(!settings)}>
+                <Icon
+                  name="profile"
+                  height={27}
+                  width={27}
+                  className="mx-1 inline-flex items-center text-white"
+                />
+              </button>
+              <button onClick={() => setSettings(!settings)}>
+                <Icon
+                  name="gear"
+                  height={24}
+                  width={24}
+                  className="mx-1 inline-flex items-center text-white"
+                />
+              </button>
+            </div>
           </AnimateEnter>
         </div>
       </nav>

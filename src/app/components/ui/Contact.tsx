@@ -1,4 +1,4 @@
-import Heading from '@/app/components/generic/Heading';
+// import Heading from '@/app/components/generic/Heading';
 import CustomLink from '@/app/components/ui/CustomLink';
 import c from 'clsx';
 
@@ -23,9 +23,6 @@ export default function Contact() {
 
   return (
     <>
-      <Heading as="h2" className="mb-6">
-        Connect
-      </Heading>
       <ul className="flex">
         {contactLinks.map(({ label, href, ariaLabel }, index) => (
           <li key={label}>
