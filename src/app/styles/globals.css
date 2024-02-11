@@ -34,7 +34,7 @@
 
 :root {
   --primary: #f03880;
-  --bg-dark: #0b010b;
+  --bg-dark: #000000;
   --text-grey: #939393;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',

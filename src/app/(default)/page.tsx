@@ -69,16 +69,12 @@ export default function Home() {
         </section>
       </AnimateEnter>
       <AnimateEnter delay={0.6}>
-        <section className="my-6 flex flex-col gap-6">
-          <p>
-            <em>Crafting interfaces</em> with a focus on design, human-computer interaction and
-            architecture. Currently working in digital banking.
-          </p>
-          <p>
-            Read further on <CustomLink href="/now">now</CustomLink> page.
-          </p>
-        </section>
         <nav className="flex flex-col gap-1">
+          <span>
+            <CustomLink href="/now" ariaLabel="now page">
+              Now
+            </CustomLink>
+          </span>
           <span>
             <CustomLink href="/craft" ariaLabel="Craft page">
               Craft

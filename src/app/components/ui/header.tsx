@@ -32,7 +32,6 @@ export default function Header() {
             <ul className="navMenu items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <AnimateEnter delay={0.3}>
                 <li className={pathname === '/' ? 'linkMenuActive' : 'linkMenu'}>
-                  <div className="backPartMenu"></div>
                   <Link className="w-max" href="/">
                     Inicio
                   </Link>
@@ -40,7 +39,6 @@ export default function Header() {
               </AnimateEnter>
               <AnimateEnter delay={0.4}>
                 <li className="linkMenu">
-                  <div className="backPartMenu"></div>
                   <Link className="w-max" href="#">
                     Lives
                   </Link>
@@ -48,7 +46,6 @@ export default function Header() {
               </AnimateEnter>
               <AnimateEnter delay={0.5}>
                 <li className={pathname === '/projects' ? 'linkMenuActive' : 'linkMenu'}>
-                  <div className="backPartMenu"></div>
                   <Link className="w-max" href="#">
                     Projetos
                   </Link>
@@ -56,7 +53,6 @@ export default function Header() {
               </AnimateEnter>
               <AnimateEnter delay={0.6}>
                 <li className="linkMenu">
-                  <div className="backPartMenu"></div>
                   <Link className="w-max" href="#">
                     Sobre Mim
                   </Link>
