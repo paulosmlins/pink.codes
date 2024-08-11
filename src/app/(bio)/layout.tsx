@@ -58,7 +58,7 @@ export interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="pt">
+    <html lang="pt" suppressHydrationWarning>
       <body className="text-sm text-white md:text-base lg:text-base">
         <Providers>
           <main className="containerBio relative mx-auto min-h-full max-w-3xl">

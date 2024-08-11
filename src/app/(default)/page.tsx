@@ -12,10 +12,10 @@ const Home = () => {
     axios
       .get('https://api.github.com/users/paulosmlins')
       .then(function (response) {
-        // console.log(response.data);
+        console.log(response.data);
       })
       .catch(function (error) {
-        // console.log(error);
+        console.log(error);
       });
   }, []);
   return (
