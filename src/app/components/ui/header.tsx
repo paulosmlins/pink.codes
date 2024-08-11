@@ -62,14 +62,14 @@ export default function Header() {
           </div>
           <AnimateEnter delay={0.7}>
             <div className="flex items-center gap-2">
-              <button onClick={() => setSettings(!settings)}>
+              {/* <button onClick={() => setSettings(!settings)}>
                 <Icon
                   name="profile"
                   height={27}
                   width={27}
                   className="mx-1 inline-flex items-center text-white"
                 />
-              </button>
+              </button> */}
               <button onClick={() => setSettings(!settings)}>
                 <Icon
                   name="gear"

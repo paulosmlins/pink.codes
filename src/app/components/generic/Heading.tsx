@@ -1,4 +1,3 @@
-import c from 'clsx';
 import { HTMLProps } from 'react';
 
 interface HeadingProps extends HTMLProps<HTMLHeadingElement> {
@@ -14,7 +13,7 @@ export default function Heading({
   const fontSizeClass = HeadingTag === 'h1' ? 'text-lg' : 'text-base';
 
   return (
-    <HeadingTag className={c('font-medium', fontSizeClass, className)} {...rest}>
+    <HeadingTag className={`font-medium ${fontSizeClass} ${className}`} {...rest}>
       {children}
     </HeadingTag>
   );

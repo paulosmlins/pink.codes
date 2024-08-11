@@ -2,13 +2,22 @@
 
 import AnimateEnter from '@/app/components/generic/AnimateEnter';
 import Container from '@/app/components/generic/Container';
-// import Heading from '@/app/components/generic/Heading';
-// import Text from '@/app/components/generic/Text';
 import styles from '@/app/styles/page.module.css';
-import CustomLink from '@/app/components/ui/CustomLink';
 import Image from 'next/image';
+import axios from 'axios';
+import { useEffect } from 'react';
 
-export default function Home() {
+const Home = () => {
+  useEffect(() => {
+    axios
+      .get('https://api.github.com/users/paulosmlins')
+      .then(function (response) {
+        // console.log(response.data);
+      })
+      .catch(function (error) {
+        // console.log(error);
+      });
+  }, []);
   return (
     <Container className="justify-start">
       <AnimateEnter delay={0.4}>
@@ -61,14 +70,20 @@ export default function Home() {
                   width="200"
                 />
               </div>
-              <div className={styles.divBallon}>
+              {/* <div className={styles.divBallon}>
                 <div className={styles.ballon}>Sobre Mim</div>
-              </div>
+              </div> */}
             </div>
           </AnimateEnter>
         </section>
       </AnimateEnter>
       <AnimateEnter delay={0.6}>
+        <section>
+          <h2 className="mb-1 font-bold text-[#aaaaaa]  sm:text-start">Projetos</h2>
+          <div className={styles.separator} />
+        </section>
+      </AnimateEnter>
+      {/* <AnimateEnter delay={0.6}>
         <nav className="flex flex-col gap-1">
           <span>
             <CustomLink href="/now" ariaLabel="now page">
@@ -86,7 +101,9 @@ export default function Home() {
             </CustomLink>
           </span>
         </nav>
-      </AnimateEnter>
+      </AnimateEnter> */}
     </Container>
   );
-}
+};
+
+export default Home;

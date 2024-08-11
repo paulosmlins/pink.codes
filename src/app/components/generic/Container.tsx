@@ -1,4 +1,3 @@
-import c from 'clsx';
 import type { ReactNode } from 'react';
 
 interface ContainerProps {
@@ -7,5 +6,5 @@ interface ContainerProps {
 }
 
 export default function Container({ children, className }: ContainerProps) {
-  return <div className={c('flex flex-col px-3', className)}>{children}</div>;
+  return <div className={`px-3' flex flex-col ${className}`}>{children}</div>;
 }

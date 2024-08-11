@@ -5,7 +5,7 @@ import AnimateEnter from '@/app/components/generic/AnimateEnter';
 import Container from '@/app/components/generic/Container';
 // import Heading from '@/app/components/generic/Heading';
 // import Separator from '@/app/components/generic/Separator';
-// import Text from '@/app/components/generic/Text'; 
+// import Text from '@/app/components/generic/Text';
 import styles from './page.module.css';
 import Tooltip from '@/app/components/ui/Tooltip';
 import useTime from '@/app/hooks/useTime';
@@ -22,22 +22,21 @@ export default function Bio() {
           <section className="relative flex items-center">
             <div className="flex w-full flex-col items-center justify-center gap-10">
               <AnimateEnter delay={0.4}>
-                <div
-                  className={`relative flex items-center justify-center ${styles.profilePicture}`}
-                >
-                  <div className="relative flex items-center justify-center overflow-hidden rounded-2xl sm:justify-end">
-                    <Image
-                      className="pointer-events-none z-10"
-                      src="/assets/images/profile.png"
-                      alt="Logo Pink Codes"
-                      height="180"
-                      width="180"
-                    />
+                <Link href="/">
+                  <div
+                    className={`relative flex items-center justify-center ${styles.profilePicture}`}
+                  >
+                    <div className="relative flex items-center justify-center overflow-hidden rounded-2xl sm:justify-end">
+                      <Image
+                        className="pointer-events-none z-10"
+                        src="/assets/images/profile.png"
+                        alt="Logo Pink Codes"
+                        height="180"
+                        width="180"
+                      />
+                    </div>
                   </div>
-                  <div className={styles.divBallon}>
-                    <div className={styles.ballon}>Don&apos;t click</div>
-                  </div>
-                </div>
+                </Link>
               </AnimateEnter>
               <AnimateEnter delay={0.6}>
                 <h1 className="flex items-center gap-3 font-bold">
@@ -75,7 +74,7 @@ export default function Bio() {
             </Link>
             <Link
               className={`${styles.linkIcon}`}
-              href="https://www.twitch.tv/pinkcodes"
+              href="https://www.instagram.com/paulosmlins"
               target="_blank"
             >
               <Icon
@@ -85,9 +84,22 @@ export default function Bio() {
                 className=" inline-flex items-center text-white"
               />
             </Link>
+            <div className={`relative flex items-center justify-center ${styles.linkIcon}`}>
+              <div className="relative flex items-center justify-center rounded-2xl sm:justify-end">
+                <Icon
+                  name="mail"
+                  height={26}
+                  width={26}
+                  className=" inline-flex items-center text-white"
+                />
+              </div>
+              <div className={styles.divBallon}>
+                <div className={styles.ballon}>paulo@pink.codes</div>
+              </div>
+            </div>
             <Link
               className={`${styles.linkIcon}`}
-              href="https://www.twitch.tv/pinkcodes"
+              href="https://www.tiktok.com/@pink.codes"
               target="_blank"
             >
               <Icon
@@ -99,25 +111,13 @@ export default function Bio() {
             </Link>
             <Link
               className={`${styles.linkIcon}`}
-              href="https://www.twitch.tv/pinkcodes"
+              href="https://www.youtube.com/@paulosmlinses"
               target="_blank"
             >
               <Icon
                 name="youtube"
-                height={24}
-                width={24}
-                className=" inline-flex items-center text-white"
-              />
-            </Link>
-            <Link
-              className={`${styles.linkIcon}`}
-              href="https://www.twitch.tv/pinkcodes"
-              target="_blank"
-            >
-              <Icon
-                name="mail"
-                height={24}
-                width={24}
+                height={26}
+                width={26}
                 className=" inline-flex items-center text-white"
               />
             </Link>

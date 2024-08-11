@@ -2,7 +2,6 @@ import Separator from '@/app/components/generic/Separator';
 import CustomLink from '@/app/components/ui/CustomLink';
 import type { Prototype } from '@/app/lib/prototypes';
 import { isWithin1Month } from '@/app/lib/utils';
-import c from 'clsx';
 import type { Post } from 'contentlayer/generated';
 import { compareDesc, format, parseISO } from 'date-fns';
 import Text from '../generic/Text';
@@ -30,7 +29,7 @@ export default function List({ items, route }: ListProps) {
                 <CustomLink
                   href={`/${route}/${slug}`}
                   hideUnderline
-                  className={c('flex justify-between gap-2 p-1')}
+                  className={'flex justify-between gap-2 p-1'}
                 >
                   <div className="flex items-center gap-2 font-medium">
                     <span>{title}</span>

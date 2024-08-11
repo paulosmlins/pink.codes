@@ -1,7 +1,4 @@
 import '@/app/styles/globals.css';
-import c from 'clsx';
-import { GeistMono } from 'geist/font/mono';
-import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Providers from '@/app/providers';
@@ -61,7 +58,7 @@ export interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={c('scroll-smooth', GeistMono.variable, GeistSans.variable)}>
+    <html lang="pt">
       <body className="text-sm text-white md:text-base lg:text-base">
         <Providers>
           <main className="containerBio relative mx-auto min-h-full max-w-3xl">

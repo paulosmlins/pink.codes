@@ -4,7 +4,7 @@
   width: 100%;
   max-width: var(--max-width);
   margin-top: 23px;
-  background-color: rgba(11, 1, 11, 0.3);
+  background-color: #0a0a0a4d;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   padding: 10px 12px;

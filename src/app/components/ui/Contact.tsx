@@ -1,6 +1,5 @@
 // import Heading from '@/app/components/generic/Heading';
 import CustomLink from '@/app/components/ui/CustomLink';
-import c from 'clsx';
 
 export default function Contact() {
   const contactLinks = [
@@ -30,10 +29,7 @@ export default function Contact() {
               {label}
             </CustomLink>
             <span
-              className={c(
-                'mx-1 dark:text-secondary-dark',
-                index === contactLinks.length - 1 && 'hidden'
-              )}
+              className={`mx-1 dark:text-secondary-dark ${index === contactLinks.length - 1 && 'hidden'}`}
               aria-hidden="true"
             >
               &middot;

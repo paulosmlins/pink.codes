@@ -1,4 +1,3 @@
-import c from 'clsx';
 import Link from 'next/link';
 import { Icon } from './Icon';
 
@@ -21,16 +20,16 @@ export default function CustomLink({
 }: CustomLinkProps) {
   const isInternalLink = href.startsWith('/');
 
-  const classes = c(
-    className,
-    !hideUnderline &&
-      'underline decoration-neutral-300 decoration-1 underline-offset-[2.5px] dark:decoration-[#505050]',
-    'transition-colors hover:text-secondary dark:hover:text-secondary-dark'
-  );
-
   if (isInternalLink) {
     return (
-      <Link href={href} className={classes} aria-label={ariaLabel}>
+      <Link
+        href={href}
+        className={`${className} ${
+          !hideUnderline &&
+          'underline decoration-neutral-300 decoration-1 underline-offset-[2.5px] dark:decoration-[#505050]'
+        } transition-colors hover:text-secondary dark:hover:text-secondary-dark`}
+        aria-label={ariaLabel}
+      >
         {arrowIcon && (
           <Icon
             name="arrow-top-left"
@@ -48,7 +47,10 @@ export default function CustomLink({
   return (
     <a
       href={href}
-      className={classes}
+      className={`${className} ${
+        !hideUnderline &&
+        'underline decoration-neutral-300 decoration-1 underline-offset-[2.5px] dark:decoration-[#505050]'
+      } transition-colors hover:text-secondary dark:hover:text-secondary-dark`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={ariaLabel}

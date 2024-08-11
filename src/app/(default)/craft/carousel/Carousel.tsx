@@ -3,7 +3,6 @@
 import Card from '@/app/components/generic/Card';
 import { Icon } from '@/app/components/ui/Icon';
 import usePointerDevice from '@/app/hooks/usePointerDevice';
-import c from 'clsx';
 import CentralLibraryImage from 'public/assets/images/carousel/central-library.webp';
 import AliyevCenterImage from 'public/assets/images/carousel/heydar-aliyev-center.webp';
 import KyotoStationImage from 'public/assets/images/carousel/kyoto-station.webp';
@@ -115,11 +114,6 @@ export default function Carousel() {
     }
   };
 
-  const cursorClasses = c(
-    currentSlide !== 0 && isCursorLeft && 'cursor-w-resize',
-    !hasReachedEndOfSlide() && isCursorRight && 'cursor-e-resize'
-  );
-
   return (
     <Card className="flex sm:pt-6 md:px-2 md:pt-8 lg:px-2 lg:pt-8">
       {isPointerDevice && (
@@ -127,9 +121,9 @@ export default function Carousel() {
           <button
             onClick={() => handleSlideChange(currentSlide - 1)}
             disabled={currentSlide === 0}
-            className={c(
+            className={
               'mr-2 rounded-sm text-secondary duration-150 dark:border-neutral-800 dark:text-secondary-dark disabled:cursor-not-allowed disabled:text-neutral-300 dark:disabled:text-neutral-600 enabled:dark:hover:bg-neutral-800 enabled:hover:bg-neutral-200'
-            )}
+            }
           >
             <Icon name="chevron-left" width={25} height={25} />
             <span className="sr-only">Previous slide</span>
@@ -142,10 +136,11 @@ export default function Carousel() {
         onScroll={(e) => {
           setSlidePosition(e.currentTarget.scrollLeft);
         }}
-        className={c(
-          'flex h-[350px] overflow-x-auto bg-scroll pb-10 md:h-[600px] md:snap-x md:snap-mandatory md:pb-12 lg:h-[600px] lg:pb-12',
-          cursorClasses
-        )}
+        className={`flex h-[350px] overflow-x-auto bg-scroll pb-10 md:h-[600px] md:snap-x md:snap-mandatory md:pb-12 lg:h-[600px] lg:pb-12',
+          ${currentSlide !== 0 && isCursorLeft && 'cursor-w-resize'} ${
+            !hasReachedEndOfSlide() && isCursorRight && 'cursor-e-resize'
+          }
+        `}
       >
         {slides.map(({ title, src, alt, author, isPriority }) => (
           <Slide
@@ -163,9 +158,9 @@ export default function Carousel() {
           <button
             onClick={() => handleSlideChange(currentSlide + 1)}
             disabled={hasReachedEndOfSlide()}
-            className={c(
+            className={
               'ml-2 rounded-sm text-secondary duration-150 dark:border-neutral-800 dark:text-secondary-dark disabled:cursor-not-allowed disabled:text-neutral-300 dark:disabled:text-neutral-600 hover:text-primary enabled:dark:hover:bg-neutral-800 enabled:hover:bg-neutral-200'
-            )}
+            }
           >
             <Icon name="chevron-right" width={25} height={25} />
             <span className="sr-only">Next slide</span>
