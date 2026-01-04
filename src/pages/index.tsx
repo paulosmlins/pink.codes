@@ -1,14 +1,14 @@
-import AnimateEnter from "@/components/generic/AnimateEnter";
-import Container from "@/components/generic/Container";
-import styles from "@/styles/page.module.css";
-import Image from "next/image";
-import axios from "axios";
-import { useEffect } from "react";
+import AnimateEnter from '@/components/generic/AnimateEnter';
+import Container from '@/components/generic/Container';
+import styles from '@/styles/page.module.css';
+import Image from 'next/image';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 const Home = () => {
   useEffect(() => {
     axios
-      .get("https://api.github.com/users/paulosmlins")
+      .get('https://api.github.com/users/paulosmlins')
       .then(function (response) {
         console.log(response.data);
       })
@@ -19,6 +19,11 @@ const Home = () => {
   return (
     <div className="container justify-start grow">
       <AnimateEnter delay={0.4}>
+        <div className="leading-none w-full h-screen flex items-center justify-center text-4xl">
+          <h1 className={styles.nomeHover}>Em construção...</h1>
+        </div>
+      </AnimateEnter>
+      {/* <AnimateEnter delay={0.4}>
         <section
           className={`relative flex flex-col-reverse pb-4 sm:grid sm:py-24 ${styles.home}`}
         >
@@ -75,9 +80,9 @@ const Home = () => {
                   width="200"
                 />
               </div>
-              {/* <div className={styles.divBallon}>
+               <div className={styles.divBallon}>
                 <div className={styles.ballon}>Sobre Mim</div>
-              </div> */}
+              </div>
             </div>
           </AnimateEnter>
         </section>
@@ -89,7 +94,7 @@ const Home = () => {
           </h2>
           <div className={styles.separator} />
         </section>
-      </AnimateEnter>
+      </AnimateEnter> */}
       {/* <AnimateEnter delay={0.6}>
         <nav className="flex flex-col gap-1">
           <span>
